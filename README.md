@@ -1,4 +1,6 @@
 # KUTGO
+## About this App
+
 
 ## Who write the code?
 ### Yasuhiro 
