@@ -1,0 +1,98 @@
+<!-- Code written by Fitra
+Function    : html of /index
+Output      : counthome home page -->
+<html>
+    <head>
+        <title>Count number of people in a Room</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='img/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='img/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='img/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='img/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='img/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='img/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ url_for('static', filename='img/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+    	<div class="container">
+    		<div class="list-group list-top90">
+    			<a href="{{ url_for('buildinga') }}" class="list-group-item list-group-item-action active">
+    				Education and Research Building A (<b>A-Wing</b>)
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					Education and Research Building B (<b>B-Wing</b>)
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					Education and Research Building C (<b>C-Wing</b>)
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					Dormitory Towers
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					Auditorium
+				</a>
+				<a href="#" class="list-group-item list-group-item-action" >
+					Central Building
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					General Gymnasium
+				</a>
+				<a href="#" class="list-group-item list-group-item-action">
+					Student Union
+				</a>
+			</div>
+    	</div>
+    	<div class="bottom-nav">
+    		<nav class="nav nav-pills flex-row">
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('gochat') }}"
+    			onmouseover="document.cb_logo.src='{{ url_for('static', filename='img/cb_active_logo.png') }}'" 
+    			onmouseout="document.cb_logo.src='{{ url_for('static', filename='img/cb_logo.png') }}'" 
+    			>
+    				<img name="cb_logo" src="{{ url_for('static', filename='img/cb_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoChat</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link active" href="{{ url_for('index') }}"
+				onmouseover="document.goroom.src='{{ url_for('static', filename='img/goroom_active_logo.png') }}'" 
+    			onmouseout="document.goroom.src='{{ url_for('static', filename='img/goroom_active_logo.png') }}'" 
+    			>
+    				<img name="goroom" src="{{ url_for('static', filename='img/goroom_active_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoRoom</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('goschedule') }}"
+				onmouseover="document.goschedule.src='{{ url_for('static', filename='img/goschedule_active_logo.png') }}'" 
+    			onmouseout="document.goschedule.src='{{ url_for('static', filename='img/goschedule_logo.png') }}'" 
+    			>
+    				<img name="goschedule" src="{{ url_for('static', filename='img/goschedule_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoSchedule</span>
+    			</a>
+			</nav>
+    	</div>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    
+	    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+	    <script type="text/javascript">
+	    // Wait for window load
+	    $(document).ready(function(){    
+	        // Animate loader off screen
+	        setTimeout(function(){ 
+	        	$(".se-pre-con").hide();
+	            // $(".se-pre-con").fadeOut("slow");
+	        },1500);
+	    });
+	    </script>
+    </body>
+</html>

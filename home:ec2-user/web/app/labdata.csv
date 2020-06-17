@@ -1,0 +1,20 @@
+ID,Room,LabName,keyword1,keyword2,keyword3,People,Bulding
+1,A314,Hamamura Lab,Communication method,Network,Signal Processing,5,A
+2,A312,Iwata Lab,Computer Architecture ,Embedded System,Brain Computer,5,A
+3,A358,Shikida Lab,Network,Human Interface Interaction,Groupware,5,A
+4,A308,Shinomori Lab,Sensitivity Information,Sensitivity Information Processing,Sensitivity Brain Science,5,A
+5,A305,Shimizu Lab,Security,Network,IoT,5,A
+6,A209,Nakahara Lab,System Neyriphysilogy,Cognitive Neuroscience,Higer Brain Function,5,A
+7,A357,Hukumoto Lab,Signal Processing,Network,Secret Sharing Method,5,A
+8,A310,Matsuzaki Lab,Software,Programming Methodology,Parallel Distributed Processing,5,A
+9,A359,Yokoyama Lab,OS,Cloud Computing ,Virtualization Technology,5,A
+10,A315,Ren Lab,Human Interface,Human Interface Interaction,Interaction,5,A
+11,A361,Ugawa Lab,Software,Programming Language,Programming Language Processing,5,A
+12,A210,Kadota Lab,Physical Education,Biological Information Analysis,Physical System,5,A
+13,A360,Kurihara Lab,Image Processing,Perceptual Information Processing,Measurement System,5,A
+14,A306,Shigemasu Lab,Experimental Psychology,"Sense,Perception, Sensitivity",Brain Cognitive Science,5,A
+15,A355,Takada Lab,Software,Software Security,Specification Description,5,A
+16,A307,Mendori Lab,Intelligent Informatics,Human Interface Interaction,Learning Support System,5,A
+17,A309,Yoshida Lab,Machine Learning,Neural Network,Fuzzy,0,A
+18,A303,Ueda Lab,Network,Netowork Architecture,Multi Media System,5,A
+19,A501,Takeuchi Lab,Game Programming,Entertainment Game Informatics,Intelligent Informatics ,5,A

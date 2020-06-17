@@ -1,0 +1,213 @@
+<!-- Code written by Fitra
+Function    : html of /goschedule
+Output      : schedule home page -->
+<html>
+    <head>
+        <title>GoSchedule</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='img/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='img/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='img/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='img/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='img/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='img/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ url_for('static', filename='img/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+    	<div class="design container">
+            <h3 class="headerschedule">Tell us the kind of things you're interested in</h3>
+            <form action="/confirmationroute" method="POST" role="form" novalidate>
+            <div class="topic">
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="communicationmethod" id="communicationmethod" value="Communication method">
+                    <label class="checklabel" for="communicationmethod">Communication method</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="computerarchitecture" id="computerarchitecture" value="Computer Architecture">
+                    <label class="checklabel" for="computerarchitecture">Computer Architecture</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="network" id="network" value="Network">
+                    <label class="checklabel" for="network">Network</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="sensitivityinformation" id="sensitivityinformation" value="Sensitivity Information">
+                    <label class="checklabel" for="sensitivityinformation">Sensitivity Information</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="security" id="security" value="Security">
+                    <label class="checklabel" for="security">Security</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="systemneyriphysilogy" id="systemneyriphysilogy" value="System Neyriphysilogy">
+                    <label class="checklabel" for="systemneyriphysilogy">System Neyriphysilogy</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="signalprocessing" id="signalprocessing" value="Signal Processing">
+                    <label class="checklabel" for="signalprocessing">Signal Processing</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="software" id="software" value="Software">
+                    <label class="checklabel" for="software">Software</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="os" id="os" value="OS">
+                    <label class="checklabel" for="os">OS</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="programming" id="programming" value="Programming">
+                    <label class="checklabel" for="programming">Programming</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="physicaleducation" id="physicaleducation" value="Physical Education">
+                    <label class="checklabel" for="physicaleducation">Physical Education</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="imageprocessing" id="imageprocessing" value="Image Processing">
+                    <label class="checklabel" for="imageprocessing">Image Processing</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="humaninterface" id="humaninterface" value="Human Interface">
+                    <label class="checklabel" for="humaninterface">Human Interface</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="experimentalpsychology" id="experimentalpsychology" value="Experimental Psychology">
+                    <label class="checklabel" for="experimentalpsychology">Experimental Psychology</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="specificationdescription" id="specificationdescription" value="Specification Description">
+                    <label class="checklabel" for="specificationdescription">Specification Description</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="machinelearning" id="machinelearning" value="Machine Learning">
+                    <label class="checklabel" for="machinelearning">Machine Learning</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="multimediasystem" id="multimediasystem" value="Multi Media System">
+                    <label class="checklabel" for="multimediasystem">Multi Media System</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="entertainmentgameniformatics" id="entertainmentgameniformatics" value="Entertainment Game Informatics">
+                    <label class="checklabel" for="entertainmentgameniformatics">Entertainment Game Informatics</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="environment" id="environment" value="Environment">
+                    <label class="checklabel" for="environment">Environment</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="mathematics" id="mathematics" value="Mathematics">
+                    <label class="checklabel" for="mathematics">Mathematics</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="physics" id="physics" value="Physics">
+                    <label class="checklabel" for="physics">Physics</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="lifestyle" id="lifestyle" value="Lifestyle">
+                    <label class="checklabel" for="lifestyle">Lifestyle</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="book" id="book" value="Book">
+                    <label class="checklabel" for="lunch">Book</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="office" id="office" value="Office">
+                    <label class="checklabel" for="office">Office</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="application" id="application" value="Application">
+                    <label class="checklabel" for="application">Application</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="documents" id="documents" value="Documents">
+                    <label class="checklabel" for="documents">Documents</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="lunch" id="lunch" value="Lunch">
+                    <label class="checklabel" for="lunch">Lunch</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="breakfast" id="breakfast" value="Breakfast">
+                    <label class="checklabel" for="breakfast">Breakfast</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="dinner" id="dinner" value="Dinner">
+                    <label class="checklabel" for="dinner">Dinner</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="party" id="party" value="Party">
+                    <label class="checklabel" for="party">Party</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="performance" id="performance" value="Performance">
+                    <label class="checklabel" for="performance">Performance</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="festival" id="festival" value="Festival">
+                    <label class="checklabel" for="festival">Festival</label>
+                </div>
+                <div class="formrow">
+                    <input class="checkbox" type="checkbox" name="concert" id="concert" value="Concert">
+                    <label class="checklabel" for="concert">Concert</label>
+                </div>
+            </div>
+            <div class="continueconfirm container">
+                <small>All good! Press "NEXT" to continue</small>
+                <button type="submit" class="btn nextbutton">NEXT ></button>
+            </div>
+            </form>
+        </div>
+    	<div class="bottom-nav">
+    		<nav class="nav nav-pills flex-row">
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('gochat') }}"
+    			onmouseover="document.cb_logo.src='{{ url_for('static', filename='img/cb_active_logo.png') }}'" 
+    			onmouseout="document.cb_logo.src='{{ url_for('static', filename='img/cb_logo.png') }}'" 
+    			>
+    				<img name="cb_logo" src="{{ url_for('static', filename='img/cb_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoChat</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('index') }}"
+				onmouseover="document.goroom.src='{{ url_for('static', filename='img/goroom_active_logo.png') }}'" 
+    			onmouseout="document.goroom.src='{{ url_for('static', filename='img/goroom_logo.png') }}'" 
+    			>
+    				<img name="goroom" src="{{ url_for('static', filename='img/goroom_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoRoom</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link active" href="{{ url_for('goschedule') }}"
+				onmouseover="document.goschedule.src='{{ url_for('static', filename='img/goschedule_active_logo.png') }}'" 
+    			onmouseout="document.goschedule.src='{{ url_for('static', filename='img/goschedule_active_logo.png') }}'" 
+    			>
+    				<img name="goschedule" src="{{ url_for('static', filename='img/goschedule_active_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoSchedule</span>
+    			</a>
+			</nav>
+    	</div>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    
+	    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+	    <script type="text/javascript">
+        // Wait for window load
+	    $(document).ready(function(){   
+	        // Animate loader off screen
+	        setTimeout(function(){ 
+	        	$(".se-pre-con").hide();
+	            // $(".se-pre-con").fadeOut("slow");
+	        },1500);
+	    });
+	    </script>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!-- Code written by Fitra
+Function    : html of /recommendedroute
+Output      : recommendroute home page -->
+<html>
+    <head>
+        <title>GoSchedule</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='img/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='img/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='img/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='img/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='img/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='img/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ url_for('static', filename='img/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='img/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='img/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ url_for('static', filename='img/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+    	<div class="design container-fluid" id="kamimaps" data-design="https://www.kochi-tech.ac.jp/english/about/img/en_kami180118.jpg">
+            <div class="row">
+                <div class="col-sm">
+                    <canvas id="mapcanvas" width="500" height="555" style="display: block; margin-left: auto; margin-right: auto;">Your browser does not support HTML5 Canvas</canvas>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                      <div class="card-body">
+                        {% for b in route_result %}
+                        {% if b == "B_Cwing"%}
+                        <h5 class="card-title">{{loop.index}} - B and C - Wing</h5>
+                        {% elif b == "CentralBuilding"%}
+                        <h5 class="card-title">{{loop.index}} - Central Building</h5>
+                        {% else %}
+                        <h5 class="card-title">{{loop.index}} - {{ b }}</h5>
+                        {% endif %}
+                        {% if b == "Awing"
+                        %}
+                        <h6 class="card-subtitle mb-2 text-muted">Lab Recommendation</h6>
+                        <ul class="list-group list-group-flush">
+                            {% for r in room_number %}
+                            {% if loop.index != 1 %}
+                            <li class="list-group-item"><b>{{r}}</b> {{lab_name[loop.index-1]}} 
+                            {% endif %}
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<div class="bottom-nav">
+    		<nav class="nav nav-pills flex-row">
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('gochat') }}"
+    			onmouseover="document.cb_logo.src='{{ url_for('static', filename='img/cb_active_logo.png') }}'" 
+    			onmouseout="document.cb_logo.src='{{ url_for('static', filename='img/cb_logo.png') }}'" 
+    			>
+    				<img name="cb_logo" src="{{ url_for('static', filename='img/cb_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoChat</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link" href="{{ url_for('index') }}"
+				onmouseover="document.goroom.src='{{ url_for('static', filename='img/goroom_active_logo.png') }}'" 
+    			onmouseout="document.goroom.src='{{ url_for('static', filename='img/goroom_logo.png') }}'" 
+    			>
+    				<img name="goroom" src="{{ url_for('static', filename='img/goroom_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoRoom</span>
+    			</a>
+    			<a class="flex-fill text-center nav-link active" href="{{ url_for('goschedule') }}"
+				onmouseover="document.goschedule.src='{{ url_for('static', filename='img/goschedule_active_logo.png') }}'" 
+    			onmouseout="document.goschedule.src='{{ url_for('static', filename='img/goschedule_active_logo.png') }}'" 
+    			>
+    				<img name="goschedule" src="{{ url_for('static', filename='img/goschedule_active_logo.png') }}" class="nav-img" style="transition: all 0.3s ease 0s;">
+    				<span>GoSchedule</span>
+    			</a>
+			</nav>
+    	</div>
+    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    
+	    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+	    <script type="text/javascript">
+            // var route_result = JSON.parse("{{ route_result|tojson|safe }}");
+            const route_result = {{ route_result | tojson }};
+            function resize(){    
+                $("#mapcanvas").outerHeight($(window).height()-$("#mapcanvas").offset().top- Math.abs($("#mapcanvas").outerHeight(true) - $("#mapcanvas").outerHeight()));
+            }
+        // Wait for window load
+	    $(document).ready(function(){   
+            resize(); 
+            $(window).resize(function(){                  
+                resize();
+            });
+	        // Animate loader off screen
+	        setTimeout(function(){ 
+	        	$(".se-pre-con").hide();
+	            // $(".se-pre-con").fadeOut("slow");
+	        },1500);
+            var position = []
+            $.each(route_result,function(idx,value){
+                switch(value){
+                    case 'Awing':
+                        position.push([194,290]);
+                        break;
+                    case 'B_Cwing':
+                        position.push([250,193]);
+                        break;
+                    case 'K':
+                        position.push([335,285]);
+                        break;
+                    case 'CentralBuilding':
+                        position.push([258,290]);
+                        break;
+                    case 'Caffe':
+                        position.push([352,327]);
+                        break;
+                    case 'Auditorium':
+                        position.push([323,376]);
+                        break;
+                }
+            });
+            $('.design').each(function() {
+                var design = $(this).attr('data-design');
+                var id = $(this).attr('id');
+                var canvas = $(this).find("canvas")[0];
+                var ctx = canvas.getContext("2d");
+                var img = new Image;
+                //B/C, A, central, K, studentu, audit
+                // var coords = [[250,193],[194,290], [258,290], [335,285],[352,327],[323,376]];
+                var coords = position;
+                img.onload = function() {
+                  ctx.drawImage(img, 0, 0, img.width, img.height,0,0,canvas.width,canvas.height);
+                  var posx = 100;
+                    var posy = 100;
+                    ctx.fillStyle="#09af00";
+                    ctx.beginPath();
+                    ctx.arc(250, 407, 10, 0, Math.PI * 2, true);
+                    ctx.fill();
+                    ctx.strokeStyle = "#09af00";
+                    ctx.beginPath();
+                    ctx.moveTo(250,407);
+                    ctx.lineTo(coords[0][0],coords[0][1]);
+                    ctx.lineWidth = 4;
+                    ctx.stroke();
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.font = "18px Segoe UI";
+                    ctx.fillText("S", 246, 412);
+                    for(var i = 0; i < coords.length; i++){
+                        ctx.fillStyle = "#F44336";
+                        ctx.beginPath();
+                        ctx.arc(coords[i][0], coords[i][1], 10, 0, Math.PI * 2, true);
+                        ctx.fill();
+                        if(i!=coords.length-1){
+                            ctx.strokeStyle = "#F44336";
+                            ctx.beginPath();
+                            ctx.moveTo(coords[i][0],coords[i][1]);
+                            ctx.lineTo(coords[i+1][0],coords[i+1][1]);
+                            ctx.lineWidth = 4;
+                            ctx.stroke();
+                        }
+                    }
+                    for(var i = 0; i < coords.length; i++){
+                        ctx.fillStyle = "#FFFFFF";
+                        ctx.font = "18px Segoe UI";
+                        ctx.fillText(i+1, coords[i][0]-4, coords[i][1]+5);
+                    }
+                };
+                img.src = design;
+                
+              });
+	    });
+	    </script>
+    </body>
+</html>
