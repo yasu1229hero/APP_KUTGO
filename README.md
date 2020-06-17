@@ -1,6 +1,17 @@
 # KUTGO
 ## About this App
+This App name is KUTGO and introduces open campus of our university for foreign students because it is difficult to understand Japanese for them. The 3 main functions are followings:
 
+1. GoChat (App users talk with Chatbot and can ask about KUT.)
+
+2. GoRoom (App users can check a laboratory's information that they're interested in and the current number of people in the laboratory.)
+
+3. GoSchedule ( App users select laboratories and facilities where they want to go, and then App provide the best route following the select.)
+
+By this application, app users can:
+1. know about KUT in English
+2. check congestion of all room
+3. look around many laboratories and facilities in KUT, efficiently
 
 ## Who write the code?
 ### Yasuhiro 
