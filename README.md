@@ -22,7 +22,7 @@ By this application, app users can:
     - `app/darknet/labrecommend.py`
     - `app/routerecommend.py`
 
-## How to build
+## How to build their function
 - GoChat
     - Using Google Framework
 - GoRoom
